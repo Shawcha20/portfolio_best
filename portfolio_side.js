@@ -23,3 +23,13 @@ let mixerPortfolio = mixitup('.work_container', {
         duration: 300
     }
 });
+document.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("work_button")){
+        togglePortfolioPopup();
+    }
+})
+function togglePortfolioPopup()
+{
+    document.querySelector(".portfolio_popup").classList.toggle("open");
+}
+document.querySelector(".portfolio_popup-close").addEventListener("click",togglePortfolioPopup);
