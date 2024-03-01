@@ -62,3 +62,21 @@ modalCloses.forEach((modalclose)=>{
         })
     })
 })
+var swiper = new Swiper(".testimonials_container", {
+    spaceBetween: 30,
+    loop:true,
+    grabCursor:true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },    breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 70,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+      }
+  });
