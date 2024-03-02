@@ -1,3 +1,20 @@
+const navMenu = document.getElementById('sidebar'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle('show-sidebar');
+    });
+}
+
+if (navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar');
+    });
+}
+
+
 const tabs= document.querySelectorAll('[data-target]'),
 tabContent= document.querySelectorAll('[data-content]')
 tabs.forEach(tab=>{
@@ -80,3 +97,21 @@ var swiper = new Swiper(".testimonials_container", {
         },
       }
   });
+  const sections = document.querySelectorAll("section[id]");
+  window.addEventListener("scroll", navHighlighter);
+  
+  function navHighlighter() {
+      let scrollY = window.pageYOffset;
+      sections.forEach(current => {
+          const sectionHeight = current.offsetHeight; // corrected from offsetheight to offsetHeight
+          const sectionTop = current.offsetTop - 50;
+          const sectionId = current.getAttribute("id"); // declared sectionId with const
+          const navLink = document.querySelector(`.nav_menu a[href="#${sectionId}"]`); // corrected querySelector syntax
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+              navLink.classList.add("active-link");
+          } else {
+              navLink.classList.remove("active-link");
+          }
+      });
+  }
+  

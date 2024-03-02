@@ -15,6 +15,9 @@
     <title>Side_bar_portfolio</title>
   </head>
   <body>
+    <div class="nav_toggle" id="nav-toggle">
+      <i class="ri-bar-chart-horizontal-fill"></i>
+    </div>
     <aside class="sidebar" id="sidebar">
       <nav class="nav">
         <div class="logo">
@@ -46,6 +49,9 @@
         </div>
         <div class="button_share">
           <i class="ri-share-line"></i>
+        </div>
+        <div class="nav_close" id="nav-close">
+          <i class="ri-close-line"></i>
         </div>
       </nav>
     </aside>
@@ -511,7 +517,7 @@
             </div>
           </div>
         </div>
-        <section class="services section"  id="services" >
+        <section class="serirvices section"  id="services" >
         <h2 data-heading="Services" class="section_title"> what I offer</h2>  
         <div class="services_container container grid">
           <div class="services_content">
@@ -658,7 +664,6 @@
                   <div class="testimonial_profile-data">
                     <span class="testimonial_profile-name">Shawcha</span>
                     <span class="testimonial_profile-details">DIrector of company</span>
-
                   </div>
                 </div>
               </div>
@@ -696,6 +701,84 @@
             <div class="swiper-pagination"></div>
           </div>
         </section>
+        <section class="contact section" id="contact">
+          <h2 class="section_title" data-heading="Get in touch">Contact Me</h2>
+          <div class="contact_container container grid">
+            <div class="contact_content">
+              <div class="contact_info">
+                <div class="contact_card">
+                  <i class="ri-mail-line contact_card-icon"></i>
+                  <h3 class="contact_card-title"> Email</h3>
+                  <span class="contact_card-data">shawcha2007040@stud.kuet.ac.bd</span>
+                  <span class="contact_button">
+                    View More<i class="ri-arrow-right-line contact_button-icon"></i>
+                  </span>
+                </div>
+                <div class="contact_card">
+                  <i class="ri-mail-line contact_card-icon"></i>
+                  <h3 class="contact_card-title"> Whatsapp</h3>
+                  <span class="contact_card-data">01874075388</span>
+                  <span class="contact_button">
+                    View More<i class="ri-arrow-right-line contact_button-icon"></i>
+                  </span>
+                </div>
+                <div class="contact_card">
+                  <i class="ri-mail-line contact_card-icon"></i>
+                  <h3 class="contact_card-title"> Messenger</h3>
+                  <span class="contact_card-data">Shawcha</span>
+                  <span class="contact_button">
+                    View More<i class="ri-arrow-right-line contact_button-icon"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="contact_content">
+              <form action="" class="contact_form">
+                <div class="input_container">
+                <label for="name">Username</label>
+                <input type="text" class="input" placeholder="Name" id="name">
+                </div>
+                <div class="input_container">
+                  <label for="email">Email</label>
+                  <input type="email" class="input"placeholder="email" id="email">
+                  </div>
+                 <div class="input_container">  
+                  <label for="phone">Phone</label>
+                    <input type="tel" class="input" placeholder="Phone no" id="phone">
+                    </div>
+                    <div class="input_container textarea">
+                      <label for="message">Message</label>
+                     <textarea name="message" placeholder="Message"id="message" cols="30" rows="10" id="message"></textarea> 
+                      </div>  
+                  <button class="button" type="submit"><i class="ri-navigation-line"></i>
+                    Send message<button> 
+              </form>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer_bg">
+            <div class="footer_container container grid">
+              <div>
+                <h1 class="footer_title">Shawcha</h1>
+                <span class="footer_sibtitle">Fronten Developer</span>
+              </div>
+              <ul class="footer_links">
+                <li><a href="#services" class="footer_link">Services</a></li>
+                <li><a href="#work" class="footer_link">Work</a></li>
+                <li><a href="#contact" class="footer_link">Contact</a></li>
+              </ul>
+            
+            <div class="footer_socials">
+              <a href="https://www.facebook.com/"  target="_blank" class="footer_social"><i class="ri-facebook-fill"></i></a>
+              <a href="https://www.instagram.com/"  target="_blank" class="footer_social"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.telegram.com/"  target="_blank" class="footer_social"><i class="ri-telegram-line"></i></a>
+              <a href="https://www.messenger.com/"  target="_blank" class="footer_social"><i class="ri-messenger-line"></i></a>
+            </div>
+          </div>
+            <p class="footer_copy">&#169; copyright. All right reserved</p>
+          </div>
+        </footer>
     </main>
    <script src="swiper-bundle.js"></script>
     <script src="mixitup.min.js"></script>
