@@ -1,10 +1,10 @@
 const navMenu = document.getElementById('sidebar'),
     navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
+    navClose = document.getElementById('nav-close')
 
 if (navToggle) {
     navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle('show-sidebar');
+        navMenu.classList.add('show-sidebar');
     });
 }
 

@@ -193,21 +193,23 @@ display:flex;
 .social_share{
     font-size: 1.5rem;
 }
-.nav_toggle{
-    height:32px;
-    width:36px;
-    cursor:pointer;
-    position: fixed;
+.nav_toggle {
+    height: 32px;
+    width: 36px;
+    cursor: pointer;
     right: 1.5rem;
-    top:2rem;
-    font-size:1.2rem;
-    border-radius:.25rem;
+    top: 2rem;
+    display: none;
+    position: fixed;
+    font-size: 1.2rem;
+    border-radius: .25rem;
     background-color: var(--skin-color);
     color: var(--title-color);
-    display:none;
-    align-items:center;
+    align-items: center;
     justify-content: center;
+    z-index: 1000; /* Ensure the toggle is displayed above other elements */
 }
+
 .nav_close{
     font-size:1.5rem;
     position:absolute;
@@ -220,7 +222,7 @@ display:flex;
     margin-left: 100px;
 }
 .home{
-    background:url('images/back.jpg');
+    background:url('/images/back.jpg');
     background-size: cover;
     background-position: center  center;
     height:100vh;
@@ -925,16 +927,18 @@ textarea.input{
         margin-left:var(--mb-1-5);
         margin-right:var(--mb-1-5);
     }
+    .nav_toggle{
+        display:initial;
+    }
     .sidebar{
         width:100%;
-        z-index:999;
-        transform:trasnlateX(-100%);
+        z-index: 900;
+        transform:translateX(-100%);
     }
-    .show-sidebar{
+    .show-sidebar{ 
         transform:translateX(0);
     }
-    .logo,
-    .button_share{
+    .logo,.button_share{
         display:none;
     }
     .menu{
@@ -956,13 +960,12 @@ textarea.input{
     .nav_link.active_link::after, .nav_link:hover::after{
         bottom:0;
     }
+    
     .nav_close{
-        display:none;
+        display:flex;
         color:var(--skin-color);
     }
-    .nav_toggle{
-        display:none;
-    }
+  
     .main{
         margin-left:0;
     }
@@ -1037,6 +1040,9 @@ textarea.input{
         grid-template-columns: repeat(2,1fr);
         gap:1.5rem;
     }
+    .skills_container{
+        grid-template-columns: 1fr;
+    }
     .services_content{
         padding: 3.5rem .5rem 1.25rem 1.5rem;
     }
@@ -1082,7 +1088,7 @@ textarea.input{
 }
 @media scren and (max-width:576px)
 {
-    .nav-toggle{
+    .nav_toggle{
         right:initial;
         left:1.5rem;
     }
@@ -1127,10 +1133,11 @@ textarea.input{
         padding:4.5rem 1.5rem 2.5rem;
     }
     .contact_container,
+    .skills_container,
     .work_container{
         grid-template-columns: 300px;
     }
-    .contact_
+    .contact,
     .my_info{
         display:none;
     }
@@ -1177,6 +1184,6 @@ textarea.input{
         grid-template-columns:max-content;
     }
     .services_content{
-        pading-right:3.5rem;
+        padding-right:3.5rem;
     }
 }
